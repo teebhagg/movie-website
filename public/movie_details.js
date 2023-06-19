@@ -7,8 +7,8 @@ const onLoad = () => {
     const moviePoster = document.querySelector(".movie_poster");
     const movieType = document.querySelector(".movie_type");
     const mov = document.querySelector(".movie_type");
-    const apiUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
-    const movie = params.get('title');
+    const apiUrl = "https://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
+    const movie = params.get("title");
     console.log(movie);
     console.log(apiUrl);
     const getMovie = async () => {

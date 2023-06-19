@@ -1,6 +1,7 @@
 let page: number = 1;
 let isLoading: boolean = false;
-const apiUrl: string = "http://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
+const apiUrl: string =
+  "https://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
 
 const homeRequests = () => {
   let featuredMoviesContainerElement = document.querySelector(
@@ -14,7 +15,7 @@ const homeRequests = () => {
   const fetchData = async (page: number) => {
     const res = await fetch(apiUrl + `Love&page=${page}`);
     const data = await res.json();
-    console.log(data)
+    console.log(data);
     const movies: MovieData[] = data.Search;
     setTimeout(() => {
       movies.forEach((movie) => {
@@ -83,7 +84,7 @@ const clearSearch = () => {
   ) as HTMLInputElement;
   if (searchOptionsContainer && searchInput) {
     searchOptionsContainer.classList.add("hidden");
-    searchInput.value = ''
+    searchInput.value = "";
   }
 };
 
@@ -144,4 +145,3 @@ const toggleDrawer = () => {
     }
   }
 };
-

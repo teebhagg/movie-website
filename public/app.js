@@ -1,7 +1,7 @@
 "use strict";
 let page = 1;
 let isLoading = false;
-const apiUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
+const apiUrl = "https://www.omdbapi.com/?i=tt3896198&apikey=e2520da8&s=";
 const homeRequests = () => {
     let featuredMoviesContainerElement = document.querySelector(".featured_movies_content");
     let featuredMoviesSectionElement = document.querySelector(".featured_movies_section");
@@ -67,7 +67,7 @@ const clearSearch = () => {
     const searchInput = document.querySelector(".search_input");
     if (searchOptionsContainer && searchInput) {
         searchOptionsContainer.classList.add("hidden");
-        searchInput.value = '';
+        searchInput.value = "";
     }
 };
 const searchMovies = async () => {
